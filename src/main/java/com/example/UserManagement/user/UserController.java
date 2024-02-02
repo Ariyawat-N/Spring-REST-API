@@ -1,5 +1,7 @@
 package com.example.UserManagement.user;
 
+import com.example.UserManagement.mail.GoogleMailService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,8 +14,9 @@ public class UserController {
     private  final  UserService userService;
 
     // User Constructor Service
-    public UserController() {
-        this.userService = new UserService();
+    @Autowired
+    public UserController(UserService userService) {
+        this.userService = userService;
     }
 
 //List all users

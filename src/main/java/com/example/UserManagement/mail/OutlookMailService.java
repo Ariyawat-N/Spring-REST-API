@@ -1,12 +1,12 @@
 package com.example.UserManagement.mail;
 
-public class GoogleMailService implements MailService{
+public class OutlookMailService implements MailService{
     // Variables
     private String url;
     private String port;
 
     //Constructor
-    public GoogleMailService() {
+    public OutlookMailService() {
     }
 
     //Setter
@@ -21,6 +21,6 @@ public class GoogleMailService implements MailService{
 
 
     public void sendMail(String email, String content) {
-        System.out.println("Sent by google");
+        System.out.println("Sent by outlook");
     }
 }
